@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(253, 251, 242);
+}
+
+@font-face {
+  font-family: cirkaBold;
+  src: url(Cirka-Bold.otf);
+}
+
+@font-face {
+  font-family: cirkaRegular;
+  src: url(Cirka-Regular.otf);
+}
+
+canvas {
+  display: block;
+/*  position: absolute;
+  top: 10vh;
+  left: 10vw;*/
+}
+
+#headline{
+  font-family: cirkaRegular;
+  font-size: 2vw;
+  position: absolute;
+  top: 3vh;
+  left: 3vw;
+  color: #000000;
+}
