@@ -107,19 +107,13 @@ function createNewParticles(sampleFactor, colorSet){
   let currentDay = day();
   let currentDate =  monthNames[currentMonth - 1] + '•' + currentDay;
 
-  // points = font.textToPoints(currentDate, 0, 0, 400, options);
-  // bounds = font.textBounds(currentDate, 0, 0, 400, options);
+  points = font.textToPoints(currentDate, 0, 0, 400, options);
+  bounds = font.textBounds(currentDate, 0, 0, 400, options);
   
-  points = font.textToPoints(currentDate, width / 2, height / 2, 400, options);
-  bounds = font.textBounds(currentDate, width / 5, height / 10, 400, options);
-
   for (let i = 0; i < points.length; i = i + 1) {
     let pt = points[i];
-    // pt.x = pt.x - bounds.x - bounds.w + windowWidth / 1.25;
-    // pt.y = pt.y - bounds.y - bounds.h + windowHeight / 1.25;
-    pt.x = pt.x - bounds.x - bounds.w/4;
-    pt.y = pt.y - bounds.y - bounds.h/4;
-    
+    pt.x = pt.x - bounds.x - bounds.w/2 + width/2;
+    pt.y = pt.y - bounds.y - bounds.h/2 + height/2;
     
     let particle = {
       x: pt.x,
